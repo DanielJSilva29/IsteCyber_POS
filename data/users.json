@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "username": "restauracao.admin",
+      "email": "restauracao.admin@gmail.com",
+      "password": "restauracao.admin",
+      "role": "ADMIN",
+      "company": "Resturacao Empresa",
+      "vat": "1234567890",
+      "shop_type": "RESTAURACAO",
+      "photo_path": ""
+    },
+    {
+      "username": "farmacia.admin",
+      "email": "farmacia.admin@gmail.com",
+      "password": "farmacia.admin",
+      "role": "ADMIN",
+      "company": "Farmacia Empresa",
+      "vat": "1234567890",
+      "shop_type": "FARMACIA",
+      "photo_path": ""
+    },
+    {
+      "username": "oficina.admin",
+      "email": "oficina.admin@gmail.com",
+      "password": "oficina.admin",
+      "role": "ADMIN",
+      "company": "Oficina Empresa",
+      "vat": "1234567890",
+      "shop_type": "OFICINA",
+      "photo_path": ""
+    },
+    {
+      "username": "outra.admin",
+      "email": "outra.admin@gmail.com",
+      "password": "outra.admin",
+      "role": "ADMIN",
+      "company": "Outra Empresa",
+      "vat": "1234567890",
+      "shop_type": "OUTRO",
+      "photo_path": ""
+    },
+    {
+      "username": "restauracao.vendor",
+      "email": "restauracao.vendor@gmail.com",
+      "password": "restauracao.vendor",
+      "role": "VENDOR",
+      "photo_path": "",
+      "company": "Resturacao Empresa",
+      "shop_type": "RESTAURACAO"
+    },
+    {
+      "username": "farmacia.vendor",
+      "email": "farmacia.vendor@gmail.com",
+      "password": "farmacia.vendor",
+      "role": "VENDOR",
+      "photo_path": "",
+      "company": "Farmacia Empresa",
+      "shop_type": "FARMACIA"
+    },
+    {
+      "username": "oficina.vendor",
+      "email": "oficina.vendor@gmail.com",
+      "password": "oficina.vendor",
+      "role": "VENDOR",
+      "photo_path": "",
+      "company": "Oficina Empresa",
+      "shop_type": "OFICINA"
+    },
+    {
+      "username": "outra.vendor",
+      "email": "outra.vendor@gmail.com",
+      "password": "outra.vendor",
+      "role": "VENDOR",
+      "photo_path": "",
+      "company": "Outra Empresa",
+      "shop_type": "OUTRO"
+    }
+  ]
+}

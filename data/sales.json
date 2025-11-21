@@ -1,0 +1,59 @@
+[
+  {
+    "id": "INV20251120113026",
+    "timestamp": "2025-11-20T11:30:26.032448",
+    "seller": "restauracao.vendor",
+    "items": [
+      {
+        "code": "01",
+        "name": "Coca-Cola",
+        "qty": 1,
+        "price_no_vat": 1.0
+      },
+      {
+        "code": "02",
+        "name": "Água",
+        "qty": 1,
+        "price_no_vat": 70.0
+      }
+    ],
+    "total_no_vat": 71.0,
+    "vat_rate": 0.23,
+    "total_with_vat": 87.33,
+    "html_path": "C:\\Users\\loure\\Downloads\\CTesPCyber_SistemaPOS_Projeto-main\\CTesPCyber_SistemaPOS_Projeto-main\\invoices\\INV20251120113026.html"
+  },
+  {
+    "id": "INV20251120113050",
+    "timestamp": "2025-11-20T11:30:50.500248",
+    "seller": "farmacia.vendor",
+    "items": [
+      {
+        "code": "01",
+        "name": "Brufen",
+        "qty": 1,
+        "price_no_vat": 10.0
+      }
+    ],
+    "total_no_vat": 10.0,
+    "vat_rate": 0.23,
+    "total_with_vat": 12.3,
+    "html_path": "C:\\Users\\loure\\Downloads\\CTesPCyber_SistemaPOS_Projeto-main\\CTesPCyber_SistemaPOS_Projeto-main\\invoices\\INV20251120113050.html"
+  },
+  {
+    "id": "INV20251120113102",
+    "timestamp": "2025-11-20T11:31:02.509076",
+    "seller": "oficina.vendor",
+    "items": [
+      {
+        "code": "01",
+        "name": "Pneu",
+        "qty": 1,
+        "price_no_vat": 100.0
+      }
+    ],
+    "total_no_vat": 100.0,
+    "vat_rate": 0.23,
+    "total_with_vat": 123.0,
+    "html_path": "C:\\Users\\loure\\Downloads\\CTesPCyber_SistemaPOS_Projeto-main\\CTesPCyber_SistemaPOS_Projeto-main\\invoices\\INV20251120113102.html"
+  }
+]
