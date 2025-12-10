@@ -6,6 +6,10 @@ from PyQt5.QtCore import pyqtSignal, Qt, QSize
 from PyQt5.QtGui import QIcon, QPixmap
 from models.product import Product
 import urllib.request
+from pathlib import Path
+
+# Diretório base do projeto
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 class ManagementPage(QWidget):
     """Página de Gestão para o Administrador."""
@@ -37,9 +41,9 @@ class ManagementPage(QWidget):
         title = QLabel("Gestão da Loja")
         title.setStyleSheet("font-size: 18px; font-weight: bold;")
         btn_sales = QPushButton("Ir para Vendas")
-        btn_sales.setIcon(QIcon("icons/product.png"))
+        btn_sales.setIcon(QIcon(str(BASE_DIR / "icons" / "product.png")))
         btn_stats = QPushButton("Dashboard")
-        btn_stats.setIcon(QIcon("icons/stats.png"))
+        btn_stats.setIcon(QIcon(str(BASE_DIR / "icons" / "stats.png")))
         for b in (btn_sales, btn_stats):
             b.setCursor(Qt.PointingHandCursor)
         top.addWidget(title)
@@ -58,7 +62,7 @@ class ManagementPage(QWidget):
         u_title.setStyleSheet("font-weight: bold;")
         self.users_list = QListWidget()
         btn_add_vendor = QPushButton("Adicionar Vendedor")
-        btn_add_vendor.setIcon(QIcon("icons/user.png"))
+        btn_add_vendor.setIcon(QIcon(str(BASE_DIR / "icons" / "user.png")))
         btn_add_vendor.setCursor(Qt.PointingHandCursor)
         u_layout.addWidget(u_title)
         u_layout.addWidget(self.users_list)
@@ -75,7 +79,7 @@ class ManagementPage(QWidget):
         self.products_list.setIconSize(QSize(40, 40)) # Ícones maiores
         self.products_list.itemDoubleClicked.connect(self._edit_product_dialog)
         btn_add_product = QPushButton("Adicionar Produto")
-        btn_add_product.setIcon(QIcon("icons/add.png"))
+        btn_add_product.setIcon(QIcon(str(BASE_DIR / "icons" / "add.png")))
         btn_add_product.setCursor(Qt.PointingHandCursor)
         btn_export_csv = QPushButton("Exportar vendas CSV")
         btn_export_csv.setCursor(Qt.PointingHandCursor)
@@ -101,7 +105,7 @@ class ManagementPage(QWidget):
     def _load_icon(self, path):
         """Helper para carregar ícones (URL ou Local)."""
         if not path:
-            return QIcon("icons/product.png")
+            return QIcon(str(BASE_DIR / "icons" / "product.png"))
         if path.startswith("http"):
             try:
                 data = urllib.request.urlopen(path, timeout=3).read()
@@ -109,7 +113,10 @@ class ManagementPage(QWidget):
                 pix.loadFromData(data)
                 return QIcon(pix)
             except:
-                return QIcon("icons/product.png")
+                return QIcon(str(BASE_DIR / "icons" / "product.png"))
+        # Caminho local - verificar se é relativo
+        if not Path(path).is_absolute():
+            path = str(BASE_DIR / path)
         return QIcon(path)
 
     def _refresh_lists(self):
@@ -122,7 +129,7 @@ class ManagementPage(QWidget):
             if u["role"] == "VENDOR" and u.get("shop_type") == shop_type and u.get("company") == company:
                 item = QListWidgetItem(u["username"])
                 # Usar helper também para fotos de utilizadores
-                item.setIcon(self._load_icon(u.get("photo_path") or "icons/user.png"))
+                item.setIcon(self._load_icon(u.get("photo_path") or str(BASE_DIR / "icons" / "user.png")))
                 self.users_list.addItem(item)
 
         # Produtos

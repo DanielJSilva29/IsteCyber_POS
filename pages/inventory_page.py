@@ -1,6 +1,10 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QListWidget, QPushButton, QHBoxLayout, QInputDialog, QMessageBox, QListWidgetItem
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
+from pathlib import Path
+
+# Diretório base do projeto
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 class InventoryPage(QWidget):
     """Página de Inventário (stock)."""
@@ -44,7 +48,10 @@ class InventoryPage(QWidget):
             min_stock = int(p.get("min_stock", 0))
             txt = f'{p["code"]} — {p["name"]} | Stock: {stock} (mín: {min_stock})'
             item = QListWidgetItem(txt)
-            item.setIcon(QIcon(p.get("image_path") or "icons/product.png"))
+            img_path = p.get("image_path")
+            if img_path and not Path(img_path).is_absolute():
+                img_path = str(BASE_DIR / img_path)
+            item.setIcon(QIcon(img_path or str(BASE_DIR / "icons" / "product.png")))
             if stock < min_stock:
                 item.setForeground(Qt.red)
             item.setData(32, p)

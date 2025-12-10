@@ -48,7 +48,7 @@
     "name": "Mousse Chocolate",
     "price_no_vat": 3.5,
     "ptype": "Sobremesa",
-    "image_path": "images/mousse.jpg",
+    "image_path": "images/mouse.jpg",
     "stock": 3,
     "min_stock": 5,
     "company": "Resturacao Empresa",

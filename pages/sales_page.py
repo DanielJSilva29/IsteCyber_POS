@@ -6,6 +6,10 @@ from PyQt5.QtCore import pyqtSignal, Qt, QSize
 from PyQt5.QtGui import QIcon, QPixmap
 from .toast import Toast
 import urllib.request # <--- Necessário para baixar imagens
+from pathlib import Path
+
+# Diretório base do projeto
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 class SalesPage(QWidget):
     """Página de Vendas com suporte a imagens online."""
@@ -25,7 +29,7 @@ class SalesPage(QWidget):
         main = QVBoxLayout(self)
         top_bar = QHBoxLayout()
         btn_back = QPushButton("Voltar")
-        btn_back.setIcon(QIcon("icons/back.png"))
+        btn_back.setIcon(QIcon(str(BASE_DIR / "icons" / "back.png")))
         btn_back.setCursor(Qt.PointingHandCursor)
         top_bar.addWidget(btn_back)
         
@@ -99,7 +103,7 @@ class SalesPage(QWidget):
     def _load_icon(self, path):
         """Helper para carregar ícone de ficheiro ou URL."""
         if not path:
-            return QIcon("icons/product.png")
+            return QIcon(str(BASE_DIR / "icons" / "product.png"))
         
         if path.startswith("http"):
             try:
@@ -109,8 +113,11 @@ class SalesPage(QWidget):
                 pix.loadFromData(data)
                 return QIcon(pix)
             except:
-                return QIcon("icons/product.png")
+                return QIcon(str(BASE_DIR / "icons" / "product.png"))
         else:
+            # Caminho local - verificar se é relativo
+            if not Path(path).is_absolute():
+                path = str(BASE_DIR / path)
             return QIcon(path)
 
     def _load_pixmap(self, path):
@@ -127,6 +134,9 @@ class SalesPage(QWidget):
             except:
                 return QPixmap()
         else:
+            # Caminho local - verificar se é relativo
+            if not Path(path).is_absolute():
+                path = str(BASE_DIR / path)
             return QPixmap(path)
 
     def _load_products(self):
