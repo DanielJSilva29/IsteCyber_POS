@@ -1,0 +1,178 @@
+[
+  {
+    "code": "R01",
+    "name": "Menu Hambúrguer",
+    "price_no_vat": 8.5,
+    "ptype": "Prato",
+    "image_path": "https://loremflickr.com/300/300/hamburger,burger",
+    "stock": 50,
+    "min_stock": 10,
+    "company": "Resturacao Empresa",
+    "shop_type": "RESTAURACAO"
+  },
+  {
+    "code": "R02",
+    "name": "Coca-Cola Lata",
+    "price_no_vat": 1.5,
+    "ptype": "Bebida",
+    "image_path": "https://loremflickr.com/300/300/coca-cola,soda",
+    "stock": 100,
+    "min_stock": 20,
+    "company": "Resturacao Empresa",
+    "shop_type": "RESTAURACAO"
+  },
+  {
+    "code": "R03",
+    "name": "Sopa do Dia",
+    "price_no_vat": 2.0,
+    "ptype": "Entrada",
+    "image_path": "https://loremflickr.com/300/300/soup,vegetable",
+    "stock": 20,
+    "min_stock": 5,
+    "company": "Resturacao Empresa",
+    "shop_type": "RESTAURACAO"
+  },
+  {
+    "code": "R04",
+    "name": "Café Expresso",
+    "price_no_vat": 0.8,
+    "ptype": "Café",
+    "image_path": "https://loremflickr.com/300/300/espresso,coffee",
+    "stock": 500,
+    "min_stock": 50,
+    "company": "Resturacao Empresa",
+    "shop_type": "RESTAURACAO"
+  },
+  {
+    "code": "R05",
+    "name": "Mousse Chocolate",
+    "price_no_vat": 3.5,
+    "ptype": "Sobremesa",
+    "image_path": "https://loremflickr.com/300/300/chocolate,mousse",
+    "stock": 3,
+    "min_stock": 5,
+    "company": "Resturacao Empresa",
+    "shop_type": "RESTAURACAO"
+  },
+  {
+    "code": "R06",
+    "name": "Água 50cl",
+    "price_no_vat": 1.0,
+    "ptype": "Bebida",
+    "image_path": "https://loremflickr.com/300/300/water,bottle",
+    "stock": 50,
+    "min_stock": 10,
+    "company": "Resturacao Empresa",
+    "shop_type": "RESTAURACAO"
+  },
+  {
+    "code": "F01",
+    "name": "Paracetamol 1g",
+    "price_no_vat": 4.5,
+    "ptype": "Medicamento",
+    "image_path": "https://loremflickr.com/300/300/medicine,pills",
+    "stock": 100,
+    "min_stock": 20,
+    "company": "Farmacia Empresa",
+    "shop_type": "FARMACIA"
+  },
+  {
+    "code": "F02",
+    "name": "Ibuprofeno 400mg",
+    "price_no_vat": 5.2,
+    "ptype": "Medicamento",
+    "image_path": "https://loremflickr.com/300/300/pills,pharmacy",
+    "stock": 80,
+    "min_stock": 15,
+    "company": "Farmacia Empresa",
+    "shop_type": "FARMACIA"
+  },
+  {
+    "code": "F03",
+    "name": "Creme Hidratante",
+    "price_no_vat": 12.99,
+    "ptype": "Cosmético",
+    "image_path": "https://loremflickr.com/300/300/moisturizer,cream",
+    "stock": 15,
+    "min_stock": 5,
+    "company": "Farmacia Empresa",
+    "shop_type": "FARMACIA"
+  },
+  {
+    "code": "F04",
+    "name": "Vitamina C",
+    "price_no_vat": 8.0,
+    "ptype": "Suplemento",
+    "image_path": "https://loremflickr.com/300/300/vitamin,orange",
+    "stock": 30,
+    "min_stock": 10,
+    "company": "Farmacia Empresa",
+    "shop_type": "FARMACIA"
+  },
+  {
+    "code": "F05",
+    "name": "Termómetro Digital",
+    "price_no_vat": 25.0,
+    "ptype": "Dispositivo",
+    "image_path": "https://loremflickr.com/300/300/thermometer,medical",
+    "stock": 2,
+    "min_stock": 5,
+    "company": "Farmacia Empresa",
+    "shop_type": "FARMACIA"
+  },
+  {
+    "code": "O01",
+    "name": "Mudança de Óleo",
+    "price_no_vat": 60.0,
+    "ptype": "Mão-de-obra",
+    "image_path": "https://loremflickr.com/300/300/engine,oil",
+    "stock": 999,
+    "min_stock": 0,
+    "company": "Oficina Empresa",
+    "shop_type": "OFICINA"
+  },
+  {
+    "code": "O02",
+    "name": "Pneu 205/55 R16",
+    "price_no_vat": 85.0,
+    "ptype": "Pneu",
+    "image_path": "https://loremflickr.com/300/300/tire,car",
+    "stock": 4,
+    "min_stock": 8,
+    "company": "Oficina Empresa",
+    "shop_type": "OFICINA"
+  },
+  {
+    "code": "O03",
+    "name": "Escovas Limpa-Vidros",
+    "price_no_vat": 25.0,
+    "ptype": "Peça",
+    "image_path": "https://loremflickr.com/300/300/windshield,wiper",
+    "stock": 10,
+    "min_stock": 5,
+    "company": "Oficina Empresa",
+    "shop_type": "OFICINA"
+  },
+  {
+    "code": "O04",
+    "name": "Bateria 12V 70Ah",
+    "price_no_vat": 110.0,
+    "ptype": "Peça",
+    "image_path": "https://loremflickr.com/300/300/car,battery",
+    "stock": 2,
+    "min_stock": 3,
+    "company": "Oficina Empresa",
+    "shop_type": "OFICINA"
+  },
+  {
+    "code": "X01",
+    "name": "Caderno A4",
+    "price_no_vat": 1.5,
+    "ptype": "Produto",
+    "image_path": "https://loremflickr.com/300/300/notebook,paper",
+    "stock": 50,
+    "min_stock": 10,
+    "company": "Outra Empresa",
+    "shop_type": "OUTRO"
+  }
+]
