@@ -4,7 +4,7 @@ Projeto desenvolvido em **Python (com JSON e interface PyQt5)** no âmbito do **
 
 Este repositório contém todo o código-fonte e recursos necessários para o sistema POS.
 
-## 👤 Autor / Mantenedor
+## 👤 Autores
 
 **Daniel Silva e Lourenço Prudêncio**  
 CTeSP em Cibersegurança — ISTEC Lisboa  
